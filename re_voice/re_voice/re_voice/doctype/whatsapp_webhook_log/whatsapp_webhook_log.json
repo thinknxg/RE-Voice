@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "format:WHL-{######}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "message_id",
+  "from_number",
+  "message_type",
+  "direction",
+  "status",
+  "actor",
+  "payload",
+  "error"
+ ],
+ "fields": [
+  {
+   "description": "Meta message id; used to drop duplicate deliveries",
+   "fieldname": "message_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Message Id",
+   "unique": 1
+  },
+  {
+   "fieldname": "from_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "From Number"
+  },
+  {
+   "fieldname": "message_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Message Type"
+  },
+  {
+   "default": "Inbound",
+   "fieldname": "direction",
+   "fieldtype": "Select",
+   "label": "Direction",
+   "options": "Inbound\nOutbound"
+  },
+  {
+   "default": "Received",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Received\nProcessing\nProcessed\nIgnored\nFailed"
+  },
+  {
+   "fieldname": "actor",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Actor",
+   "options": "\nAgent\nCustomer\nUnknown"
+  },
+  {
+   "fieldname": "payload",
+   "fieldtype": "Code",
+   "label": "Payload",
+   "options": "JSON"
+  },
+  {
+   "fieldname": "error",
+   "fieldtype": "Small Text",
+   "label": "Error",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 0,
+ "issingle": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "RE Voice",
+ "name": "WhatsApp Webhook Log",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "RE Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "message_id,from_number",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

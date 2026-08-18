@@ -1,0 +1,235 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gate_sb",
+  "voice_enabled",
+  "llm_enabled",
+  "col_break_1",
+  "monthly_budget",
+  "month_spend",
+  "asr_sb",
+  "asr_provider",
+  "asr_endpoint",
+  "col_break_2",
+  "asr_model",
+  "asr_cost_per_minute",
+  "llm_sb",
+  "llm_provider",
+  "llm_endpoint",
+  "llm_model",
+  "col_break_3",
+  "api_key",
+  "llm_confidence_threshold",
+  "task_sb",
+  "enable_translation",
+  "enable_sentiment",
+  "col_break_4",
+  "enable_summary",
+  "enable_scoring",
+  "retention_sb",
+  "audio_retention_days"
+ ],
+ "fields": [
+  {
+   "fieldname": "gate_sb",
+   "fieldtype": "Section Break",
+   "label": "Enablement"
+  },
+  {
+   "default": 0,
+   "fieldname": "voice_enabled",
+   "fieldtype": "Check",
+   "label": "Enable Voice Processing"
+  },
+  {
+   "default": 0,
+   "fieldname": "llm_enabled",
+   "fieldtype": "Check",
+   "label": "Enable LLM Intent Fallback"
+  },
+  {
+   "fieldname": "col_break_1",
+   "fieldtype": "Column Break",
+   "label": "Col Break 1"
+  },
+  {
+   "description": "When exceeded, Tier-1 commands keep working and LLM calls stop",
+   "fieldname": "monthly_budget",
+   "fieldtype": "Currency",
+   "label": "Monthly AI Budget"
+  },
+  {
+   "fieldname": "month_spend",
+   "fieldtype": "Currency",
+   "label": "Spend This Month",
+   "read_only": 1
+  },
+  {
+   "fieldname": "asr_sb",
+   "fieldtype": "Section Break",
+   "label": "Speech to Text"
+  },
+  {
+   "default": "None",
+   "fieldname": "asr_provider",
+   "fieldtype": "Select",
+   "label": "Asr Provider",
+   "options": "OpenAI Whisper API\nLocal Whisper\nNone"
+  },
+  {
+   "description": "Base URL for local Whisper, e.g. http://localhost:9000",
+   "fieldname": "asr_endpoint",
+   "fieldtype": "Data",
+   "label": "Asr Endpoint"
+  },
+  {
+   "fieldname": "col_break_2",
+   "fieldtype": "Column Break",
+   "label": "Col Break 2"
+  },
+  {
+   "default": "whisper-1",
+   "fieldname": "asr_model",
+   "fieldtype": "Data",
+   "label": "Asr Model"
+  },
+  {
+   "default": 0,
+   "fieldname": "asr_cost_per_minute",
+   "fieldtype": "Currency",
+   "label": "Asr Cost Per Minute"
+  },
+  {
+   "fieldname": "llm_sb",
+   "fieldtype": "Section Break",
+   "label": "Language Model"
+  },
+  {
+   "default": "None",
+   "fieldname": "llm_provider",
+   "fieldtype": "Select",
+   "label": "Llm Provider",
+   "options": "Anthropic\nOpenAI\nCustom\nNone"
+  },
+  {
+   "fieldname": "llm_endpoint",
+   "fieldtype": "Data",
+   "label": "Llm Endpoint"
+  },
+  {
+   "fieldname": "llm_model",
+   "fieldtype": "Data",
+   "label": "Llm Model"
+  },
+  {
+   "fieldname": "col_break_3",
+   "fieldtype": "Column Break",
+   "label": "Col Break 3"
+  },
+  {
+   "fieldname": "api_key",
+   "fieldtype": "Password",
+   "label": "Api Key"
+  },
+  {
+   "default": 0.6,
+   "description": "Below this, ask the user to clarify instead of acting",
+   "fieldname": "llm_confidence_threshold",
+   "fieldtype": "Float",
+   "label": "Llm Confidence Threshold"
+  },
+  {
+   "fieldname": "task_sb",
+   "fieldtype": "Section Break",
+   "label": "Task Toggles"
+  },
+  {
+   "default": 1,
+   "fieldname": "enable_translation",
+   "fieldtype": "Check",
+   "label": "Enable Translation"
+  },
+  {
+   "default": 1,
+   "fieldname": "enable_sentiment",
+   "fieldtype": "Check",
+   "label": "Enable Sentiment"
+  },
+  {
+   "fieldname": "col_break_4",
+   "fieldtype": "Column Break",
+   "label": "Col Break 4"
+  },
+  {
+   "default": 1,
+   "fieldname": "enable_summary",
+   "fieldtype": "Check",
+   "label": "Enable Summary"
+  },
+  {
+   "default": 1,
+   "fieldname": "enable_scoring",
+   "fieldtype": "Check",
+   "label": "Enable Scoring"
+  },
+  {
+   "fieldname": "retention_sb",
+   "fieldtype": "Section Break",
+   "label": "Retention"
+  },
+  {
+   "default": 90,
+   "description": "Voice Message audio files are purged after this many days; transcripts are kept",
+   "fieldname": "audio_retention_days",
+   "fieldtype": "Int",
+   "label": "Audio Retention Days"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 0,
+ "issingle": 1,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "RE Voice",
+ "name": "AI Settings",
+ "naming_rule": "",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "RE Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

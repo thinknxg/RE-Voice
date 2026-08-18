@@ -1,0 +1,218 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "format:VI-{######}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "in_sb",
+  "from_number",
+  "agent",
+  "voice_message",
+  "col_break_1",
+  "transcript",
+  "channel",
+  "parse_sb",
+  "command",
+  "resolver",
+  "confidence",
+  "col_break_2",
+  "entities",
+  "status",
+  "out_sb",
+  "reference_doctype",
+  "reference_name",
+  "col_break_3",
+  "reply_sent",
+  "error"
+ ],
+ "fields": [
+  {
+   "fieldname": "in_sb",
+   "fieldtype": "Section Break",
+   "label": "Input"
+  },
+  {
+   "fieldname": "from_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "From Number"
+  },
+  {
+   "fieldname": "agent",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Agent",
+   "options": "RE Agent"
+  },
+  {
+   "fieldname": "voice_message",
+   "fieldtype": "Link",
+   "label": "Voice Message",
+   "options": "Voice Message"
+  },
+  {
+   "fieldname": "col_break_1",
+   "fieldtype": "Column Break",
+   "label": "Col Break 1"
+  },
+  {
+   "fieldname": "transcript",
+   "fieldtype": "Small Text",
+   "label": "Transcript"
+  },
+  {
+   "default": "Voice",
+   "fieldname": "channel",
+   "fieldtype": "Select",
+   "label": "Channel",
+   "options": "Voice\nText\nInteractive"
+  },
+  {
+   "fieldname": "parse_sb",
+   "fieldtype": "Section Break",
+   "label": "Parse"
+  },
+  {
+   "fieldname": "command",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Command",
+   "options": "Voice Command"
+  },
+  {
+   "description": "Which tier resolved this intent",
+   "fieldname": "resolver",
+   "fieldtype": "Select",
+   "label": "Resolver",
+   "options": "\nKeyword\nLLM\nInteractive"
+  },
+  {
+   "fieldname": "confidence",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Confidence"
+  },
+  {
+   "fieldname": "col_break_2",
+   "fieldtype": "Column Break",
+   "label": "Col Break 2"
+  },
+  {
+   "fieldname": "entities",
+   "fieldtype": "Code",
+   "label": "Entities",
+   "options": "JSON"
+  },
+  {
+   "default": "Parsed",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Parsed\nAwaiting Confirmation\nExecuted\nCancelled\nClarifying\nUnrecognised\nFailed"
+  },
+  {
+   "fieldname": "out_sb",
+   "fieldtype": "Section Break",
+   "label": "Result"
+  },
+  {
+   "fieldname": "reference_doctype",
+   "fieldtype": "Data",
+   "label": "Reference Doctype",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reference_name",
+   "fieldtype": "Data",
+   "label": "Reference Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break_3",
+   "fieldtype": "Column Break",
+   "label": "Col Break 3"
+  },
+  {
+   "fieldname": "reply_sent",
+   "fieldtype": "Small Text",
+   "label": "Reply Sent",
+   "read_only": 1
+  },
+  {
+   "fieldname": "error",
+   "fieldtype": "Small Text",
+   "label": "Error",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 0,
+ "issingle": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "RE Voice",
+ "name": "Voice Intent",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "RE Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "RE Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "RE Sales Agent",
+   "share": 1,
+   "write": 0
+  }
+ ],
+ "search_fields": "transcript,command",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,127 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "format:SR-{######}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_thread",
+  "lead",
+  "label",
+  "confidence",
+  "rationale",
+  "model",
+  "overridden_by_agent"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer_thread",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer Thread",
+   "options": "Customer Thread"
+  },
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Lead",
+   "options": "RE Lead"
+  },
+  {
+   "fieldname": "label",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Label",
+   "options": "\nPositive\nNeutral\nNegative"
+  },
+  {
+   "fieldname": "confidence",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Confidence"
+  },
+  {
+   "fieldname": "rationale",
+   "fieldtype": "Small Text",
+   "label": "Rationale"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model",
+   "read_only": 1
+  },
+  {
+   "fieldname": "overridden_by_agent",
+   "fieldtype": "Check",
+   "label": "Overridden By Agent"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 0,
+ "issingle": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "RE Voice",
+ "name": "Sentiment Reading",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "RE Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "RE Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "RE Sales Agent",
+   "share": 1,
+   "write": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,157 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "field:command_name",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "cmd_sb",
+  "command_name",
+  "command_group",
+  "enabled",
+  "col_break_1",
+  "handler",
+  "needs_confirmation",
+  "agent_only",
+  "match_sb",
+  "keywords",
+  "sample_phrases",
+  "description",
+  "ent_sb",
+  "entities"
+ ],
+ "fields": [
+  {
+   "fieldname": "cmd_sb",
+   "fieldtype": "Section Break",
+   "label": "Command"
+  },
+  {
+   "fieldname": "command_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Command Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "command_group",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Command Group",
+   "options": "\nLead Lifecycle\nScheduling\nContent\nQuery\nCapture\nComms"
+  },
+  {
+   "default": 1,
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "col_break_1",
+   "fieldtype": "Column Break",
+   "label": "Col Break 1"
+  },
+  {
+   "description": "Dotted path to the handler function",
+   "fieldname": "handler",
+   "fieldtype": "Data",
+   "label": "Handler",
+   "reqd": 1
+  },
+  {
+   "description": "Destructive or irreversible \u2014 require a Confirm tap",
+   "fieldname": "needs_confirmation",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Needs Confirmation"
+  },
+  {
+   "default": 1,
+   "fieldname": "agent_only",
+   "fieldtype": "Check",
+   "label": "Agent Only"
+  },
+  {
+   "fieldname": "match_sb",
+   "fieldtype": "Section Break",
+   "label": "Matching"
+  },
+  {
+   "description": "Comma-separated trigger keywords for the fast matcher",
+   "fieldname": "keywords",
+   "fieldtype": "Small Text",
+   "label": "Keywords"
+  },
+  {
+   "description": "One phrase per line; used by both matcher tiers",
+   "fieldname": "sample_phrases",
+   "fieldtype": "Small Text",
+   "label": "Sample Phrases"
+  },
+  {
+   "description": "Shown to the LLM as the tool description",
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "ent_sb",
+   "fieldtype": "Section Break",
+   "label": "Entities"
+  },
+  {
+   "fieldname": "entities",
+   "fieldtype": "Table",
+   "label": "Entities",
+   "options": "Command Entity"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 0,
+ "issingle": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "RE Voice",
+ "name": "Voice Command",
+ "naming_rule": "",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "RE Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "command_name,sample_phrases",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "command_name",
+ "track_changes": 1
+}

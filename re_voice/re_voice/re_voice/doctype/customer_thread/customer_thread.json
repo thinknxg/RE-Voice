@@ -1,0 +1,177 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "format:CT-{######}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "who_sb",
+  "display_name",
+  "phone_number",
+  "lead",
+  "col_break_1",
+  "deal",
+  "agent",
+  "language",
+  "state_sb",
+  "stage",
+  "last_summary",
+  "summary_updated_on",
+  "msg_sb",
+  "messages"
+ ],
+ "fields": [
+  {
+   "fieldname": "who_sb",
+   "fieldtype": "Section Break",
+   "label": "Party"
+  },
+  {
+   "fieldname": "display_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Display Name"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Phone Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Lead",
+   "options": "RE Lead"
+  },
+  {
+   "fieldname": "col_break_1",
+   "fieldtype": "Column Break",
+   "label": "Col Break 1"
+  },
+  {
+   "fieldname": "deal",
+   "fieldtype": "Link",
+   "label": "Deal",
+   "options": "RE Deal"
+  },
+  {
+   "fieldname": "agent",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Agent",
+   "options": "RE Agent"
+  },
+  {
+   "fieldname": "language",
+   "fieldtype": "Data",
+   "label": "Language"
+  },
+  {
+   "fieldname": "state_sb",
+   "fieldtype": "Section Break",
+   "label": "State"
+  },
+  {
+   "default": "Enquiry",
+   "fieldname": "stage",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Stage",
+   "options": "Enquiry\nOptions Sent\nVisit Scheduled\nPost Visit\nNegotiation\nClosed"
+  },
+  {
+   "fieldname": "last_summary",
+   "fieldtype": "Small Text",
+   "label": "Last Summary",
+   "read_only": 1
+  },
+  {
+   "fieldname": "summary_updated_on",
+   "fieldtype": "Datetime",
+   "label": "Summary Updated On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "msg_sb",
+   "fieldtype": "Section Break",
+   "label": "Messages"
+  },
+  {
+   "fieldname": "messages",
+   "fieldtype": "Table",
+   "label": "Messages",
+   "options": "Thread Message"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 0,
+ "issingle": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "RE Voice",
+ "name": "Customer Thread",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "RE Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "RE Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "RE Sales Agent",
+   "share": 1,
+   "write": 0
+  }
+ ],
+ "search_fields": "phone_number,lead",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "display_name",
+ "track_changes": 1
+}

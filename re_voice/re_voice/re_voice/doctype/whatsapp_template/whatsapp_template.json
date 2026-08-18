@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "field:template_name",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "template_name",
+  "language_code",
+  "purpose",
+  "approval_status",
+  "body_preview",
+  "variable_map"
+ ],
+ "fields": [
+  {
+   "description": "Exact template name registered with Meta",
+   "fieldname": "template_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Template Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "en",
+   "fieldname": "language_code",
+   "fieldtype": "Data",
+   "label": "Language Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Purpose",
+   "options": "\nPost Visit Feedback\nFollow Up\nLead Welcome\nVisit Reminder\nOther"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Approval Status",
+   "options": "Draft\nSubmitted\nApproved\nRejected"
+  },
+  {
+   "description": "Copy of the approved body; used to preview, not to send",
+   "fieldname": "body_preview",
+   "fieldtype": "Small Text",
+   "label": "Body Preview"
+  },
+  {
+   "description": "JSON list naming each {{n}} variable, e.g. [\"customer_name\", \"unit_title\"]",
+   "fieldname": "variable_map",
+   "fieldtype": "Small Text",
+   "label": "Variable Map"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 0,
+ "issingle": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "RE Voice",
+ "name": "WhatsApp Template",
+ "naming_rule": "",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "RE Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "template_name",
+ "track_changes": 1
+}

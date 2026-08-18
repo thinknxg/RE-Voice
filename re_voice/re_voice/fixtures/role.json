@@ -1,0 +1,10 @@
+[
+ {
+  "doctype": "Role",
+  "name": "Voice Ops Manager",
+  "role_name": "Voice Ops Manager",
+  "desk_access": 1,
+  "disabled": 0,
+  "is_custom": 0
+ }
+]

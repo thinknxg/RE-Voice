@@ -1,0 +1,172 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "w_sb",
+  "weight_budget",
+  "weight_frequency",
+  "weight_visits",
+  "col_break_1",
+  "weight_response",
+  "weight_loan",
+  "band_sb",
+  "hot_threshold",
+  "warm_threshold",
+  "param_sb",
+  "frequency_window_days",
+  "frequency_target",
+  "col_break_2",
+  "response_target_minutes",
+  "visits_target"
+ ],
+ "fields": [
+  {
+   "fieldname": "w_sb",
+   "fieldtype": "Section Break",
+   "label": "Signal Weights"
+  },
+  {
+   "default": 30,
+   "fieldname": "weight_budget",
+   "fieldtype": "Int",
+   "label": "Budget Fit"
+  },
+  {
+   "default": 20,
+   "fieldname": "weight_frequency",
+   "fieldtype": "Int",
+   "label": "Conversation Frequency"
+  },
+  {
+   "default": 25,
+   "fieldname": "weight_visits",
+   "fieldtype": "Int",
+   "label": "Site Visits"
+  },
+  {
+   "fieldname": "col_break_1",
+   "fieldtype": "Column Break",
+   "label": "Col Break 1"
+  },
+  {
+   "default": 15,
+   "fieldname": "weight_response",
+   "fieldtype": "Int",
+   "label": "Response Speed"
+  },
+  {
+   "default": 10,
+   "fieldname": "weight_loan",
+   "fieldtype": "Int",
+   "label": "Loan Requirement"
+  },
+  {
+   "fieldname": "band_sb",
+   "fieldtype": "Section Break",
+   "label": "Bands"
+  },
+  {
+   "default": 75,
+   "fieldname": "hot_threshold",
+   "fieldtype": "Int",
+   "label": "Hot Threshold"
+  },
+  {
+   "default": 45,
+   "fieldname": "warm_threshold",
+   "fieldtype": "Int",
+   "label": "Warm Threshold"
+  },
+  {
+   "fieldname": "param_sb",
+   "fieldtype": "Section Break",
+   "label": "Parameters"
+  },
+  {
+   "default": 14,
+   "fieldname": "frequency_window_days",
+   "fieldtype": "Int",
+   "label": "Frequency Window Days"
+  },
+  {
+   "default": 6,
+   "description": "Inbound messages in the window that count as full marks",
+   "fieldname": "frequency_target",
+   "fieldtype": "Int",
+   "label": "Frequency Target"
+  },
+  {
+   "fieldname": "col_break_2",
+   "fieldtype": "Column Break",
+   "label": "Col Break 2"
+  },
+  {
+   "default": 60,
+   "description": "Median reply latency at or below this scores full marks",
+   "fieldname": "response_target_minutes",
+   "fieldtype": "Int",
+   "label": "Response Target Minutes"
+  },
+  {
+   "default": 2,
+   "fieldname": "visits_target",
+   "fieldtype": "Int",
+   "label": "Visits Target"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 0,
+ "issingle": 1,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "RE Voice",
+ "name": "Lead Score Model",
+ "naming_rule": "",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "RE Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "RE Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

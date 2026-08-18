@@ -1,0 +1,156 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "format:LSL-{######}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "lead",
+  "total_score",
+  "band",
+  "comp_sb",
+  "score_budget",
+  "score_frequency",
+  "score_visits",
+  "col_break_1",
+  "score_response",
+  "score_loan",
+  "why_sb",
+  "reason"
+ ],
+ "fields": [
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Lead",
+   "options": "RE Lead",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_score",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Total Score"
+  },
+  {
+   "fieldname": "band",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Band",
+   "options": "\nHot\nWarm\nCold"
+  },
+  {
+   "fieldname": "comp_sb",
+   "fieldtype": "Section Break",
+   "label": "Components"
+  },
+  {
+   "fieldname": "score_budget",
+   "fieldtype": "Int",
+   "label": "Score Budget"
+  },
+  {
+   "fieldname": "score_frequency",
+   "fieldtype": "Int",
+   "label": "Score Frequency"
+  },
+  {
+   "fieldname": "score_visits",
+   "fieldtype": "Int",
+   "label": "Score Visits"
+  },
+  {
+   "fieldname": "col_break_1",
+   "fieldtype": "Column Break",
+   "label": "Col Break 1"
+  },
+  {
+   "fieldname": "score_response",
+   "fieldtype": "Int",
+   "label": "Score Response"
+  },
+  {
+   "fieldname": "score_loan",
+   "fieldtype": "Int",
+   "label": "Score Loan"
+  },
+  {
+   "fieldname": "why_sb",
+   "fieldtype": "Section Break",
+   "label": "Why Sb"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Why this score"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 0,
+ "issingle": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "RE Voice",
+ "name": "Lead Score Log",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "RE Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "RE Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "RE Sales Agent",
+   "share": 1,
+   "write": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

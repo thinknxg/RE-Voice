@@ -1,0 +1,221 @@
+[
+ {
+  "doctype": "Workspace",
+  "name": "Voice CRM",
+  "label": "Voice CRM",
+  "title": "Voice CRM",
+  "module": "RE Voice",
+  "public": 1,
+  "is_hidden": 0,
+  "icon": "message",
+  "content": "[{\"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\">Voice CRM</span>\", \"col\": 12}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Conversations\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Voice Engine\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Intelligence\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Setup\", \"col\": 4}}]",
+  "links": [
+   {
+    "type": "Card Break",
+    "label": "Conversations",
+    "hidden": 0,
+    "onboard": 0,
+    "link_count": 0
+   },
+   {
+    "type": "Link",
+    "label": "Customer Thread",
+    "link_type": "DocType",
+    "link_to": "Customer Thread",
+    "hidden": 0,
+    "is_query_report": 0,
+    "onboard": 0,
+    "link_count": 0
+   },
+   {
+    "type": "Link",
+    "label": "Conversation Session",
+    "link_type": "DocType",
+    "link_to": "Conversation Session",
+    "hidden": 0,
+    "is_query_report": 0,
+    "onboard": 0,
+    "link_count": 0
+   },
+   {
+    "type": "Link",
+    "label": "WhatsApp Webhook Log",
+    "link_type": "DocType",
+    "link_to": "WhatsApp Webhook Log",
+    "hidden": 0,
+    "is_query_report": 0,
+    "onboard": 0,
+    "link_count": 0
+   },
+   {
+    "type": "Card Break",
+    "label": "Voice Engine",
+    "hidden": 0,
+    "onboard": 0,
+    "link_count": 0
+   },
+   {
+    "type": "Link",
+    "label": "Voice Intent",
+    "link_type": "DocType",
+    "link_to": "Voice Intent",
+    "hidden": 0,
+    "is_query_report": 0,
+    "onboard": 0,
+    "link_count": 0
+   },
+   {
+    "type": "Link",
+    "label": "Voice Message",
+    "link_type": "DocType",
+    "link_to": "Voice Message",
+    "hidden": 0,
+    "is_query_report": 0,
+    "onboard": 0,
+    "link_count": 0
+   },
+   {
+    "type": "Link",
+    "label": "Voice Command",
+    "link_type": "DocType",
+    "link_to": "Voice Command",
+    "hidden": 0,
+    "is_query_report": 0,
+    "onboard": 0,
+    "link_count": 0
+   },
+   {
+    "type": "Link",
+    "label": "Voice Command Analytics",
+    "link_type": "Report",
+    "link_to": "Voice Command Analytics",
+    "hidden": 0,
+    "is_query_report": 1,
+    "onboard": 0,
+    "link_count": 0
+   },
+   {
+    "type": "Card Break",
+    "label": "Intelligence",
+    "hidden": 0,
+    "onboard": 0,
+    "link_count": 0
+   },
+   {
+    "type": "Link",
+    "label": "Lead Score Log",
+    "link_type": "DocType",
+    "link_to": "Lead Score Log",
+    "hidden": 0,
+    "is_query_report": 0,
+    "onboard": 0,
+    "link_count": 0
+   },
+   {
+    "type": "Link",
+    "label": "Sentiment Reading",
+    "link_type": "DocType",
+    "link_to": "Sentiment Reading",
+    "hidden": 0,
+    "is_query_report": 0,
+    "onboard": 0,
+    "link_count": 0
+   },
+   {
+    "type": "Link",
+    "label": "Lead Score Model",
+    "link_type": "DocType",
+    "link_to": "Lead Score Model",
+    "hidden": 0,
+    "is_query_report": 0,
+    "onboard": 0,
+    "link_count": 0
+   },
+   {
+    "type": "Link",
+    "label": "Voice Usage Log",
+    "link_type": "DocType",
+    "link_to": "Voice Usage Log",
+    "hidden": 0,
+    "is_query_report": 0,
+    "onboard": 0,
+    "link_count": 0
+   },
+   {
+    "type": "Card Break",
+    "label": "Setup",
+    "hidden": 0,
+    "onboard": 0,
+    "link_count": 0
+   },
+   {
+    "type": "Link",
+    "label": "AI Settings",
+    "link_type": "DocType",
+    "link_to": "AI Settings",
+    "hidden": 0,
+    "is_query_report": 0,
+    "onboard": 0,
+    "link_count": 0
+   },
+   {
+    "type": "Link",
+    "label": "Voice Locale Profile",
+    "link_type": "DocType",
+    "link_to": "Voice Locale Profile",
+    "hidden": 0,
+    "is_query_report": 0,
+    "onboard": 0,
+    "link_count": 0
+   },
+   {
+    "type": "Link",
+    "label": "WhatsApp Template",
+    "link_type": "DocType",
+    "link_to": "WhatsApp Template",
+    "hidden": 0,
+    "is_query_report": 0,
+    "onboard": 0,
+    "link_count": 0
+   }
+  ],
+  "shortcuts": [
+   {
+    "type": "DocType",
+    "label": "Failed Intents",
+    "link_to": "Voice Intent",
+    "doc_view": "List",
+    "stats_filter": "{\"status\": \"Failed\"}",
+    "color": "Red"
+   },
+   {
+    "type": "DocType",
+    "label": "Unrecognised",
+    "link_to": "Voice Intent",
+    "doc_view": "List",
+    "stats_filter": "{\"status\": \"Unrecognised\"}",
+    "color": "Orange"
+   },
+   {
+    "type": "DocType",
+    "label": "Active Threads",
+    "link_to": "Customer Thread",
+    "doc_view": "List",
+    "color": "Blue"
+   },
+   {
+    "type": "Report",
+    "label": "Command Analytics",
+    "link_to": "Voice Command Analytics",
+    "doc_view": "Report",
+    "report_ref_doctype": "Voice Intent"
+   }
+  ],
+  "charts": [],
+  "number_cards": [],
+  "custom_blocks": [],
+  "quick_lists": [],
+  "roles": [],
+  "sequence_id": 99.0
+ }
+]

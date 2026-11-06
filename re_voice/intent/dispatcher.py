@@ -174,6 +174,16 @@ def _request_confirmation(intent, command_name, parsed, session):
     return None
 
 
+def _owned_intent(intent_name, agent, allowed_statuses):
+    # Return the Voice Intent only if it belongs to this agent and is still
+    # in one of the expected states; otherwise None (expired / replayed / foreign).
+    row = frappe.db.get_value("Voice Intent", intent_name,
+                              ["name", "agent", "status"], as_dict=True)
+    if not row or row.agent != agent or row.status not in allowed_statuses:
+        return None
+    return frappe.get_doc("Voice Intent", intent_name)
+
+
 def _handle_interactive(message, agent, session):
     interactive = message.get("interactive") or {}
     reply_id = ((interactive.get("button_reply") or {}).get("id")
@@ -183,16 +193,25 @@ def _handle_interactive(message, agent, session):
     if reply_id.startswith("confirm::"):
         intent_name = reply_id.split("::", 1)[1]
         session.db_set("pending_intent", None)
+        if not _owned_intent(intent_name, agent, ("Awaiting Confirmation",)):
+            outbound.reply(phone, _("That confirmation has expired or was already used."))
+            return None
         return execute(intent_name)
     if reply_id.startswith("cancel::"):
         intent_name = reply_id.split("::", 1)[1]
+        if not _owned_intent(intent_name, agent, ("Awaiting Confirmation",)):
+            outbound.reply(phone, _("That confirmation has expired or was already used."))
+            return None
         frappe.db.set_value("Voice Intent", intent_name, "status", "Cancelled")
         session.db_set("pending_intent", None)
         outbound.reply(phone, _("Cancelled — nothing was changed."))
         return None
     if reply_id.startswith("intent::"):
         _, intent_name, command_name = reply_id.split("::", 2)
-        intent = frappe.get_doc("Voice Intent", intent_name)
+        intent = _owned_intent(intent_name, agent, ("Clarifying",))
+        if not intent:
+            outbound.reply(phone, _("That option has expired. Please send the command again."))
+            return None
         intent.db_set("command", command_name)
         intent.db_set("resolver", "Interactive")
         intent.db_set("confidence", 1.0)
@@ -219,6 +238,17 @@ def execute(intent_name):
         intent.db_set("status", "Failed")
         intent.db_set("error", "Handler or agent user not configured")
         return None
+
+    # Atomic claim: only one caller can move the intent out of a pending state.
+    frappe.db.sql("""UPDATE `tabVoice Intent` SET status = 'Executed'
+                     WHERE name = %s
+                       AND status IN ('Parsed', 'Awaiting Confirmation', 'Clarifying')""",
+                  intent_name)
+    if not frappe.db.sql("SELECT ROW_COUNT()")[0][0]:
+        outbound.reply(intent.from_number,
+                       _("That command was already processed."))
+        return None
+    frappe.db.commit()
 
     original_user = frappe.session.user
     try:
